@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>All Lessons</title>
+    </head>
+    <body>
+        <h1>All Lessons</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Note</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Boucle pour afficher chaque leçon dans la liste -->
+            <tr th:each="lesson : ${lessons}">
+                <td th:text="${lesson.id}">UNKNOWN</td>
+                <td th:text="${lesson.title}">UNKNOWN</td>
+                <td th:text="${lesson.note}">UNKNOWN</td>
+                <td th:text="${lesson.professeur}">UNKNOWN</td>  <!-- Affichage du professeur -->
+            </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
